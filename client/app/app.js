@@ -26,13 +26,3 @@ app.controller('CustomersCtrl', function($scope) {
       {id: 4, name: 'Cesar', total: 15.994},
   ];
 });
-
-app.factory('customersFactory', function($http) {
-    var factory = {};
-
-    factory.getCustomers = function() {
-        return $http.get('http://localhost:3000/api/customer');
-    };
-    
-    return factory;
-});
