@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "cd client && webpack-dev-server",
+    "server": "node server/server.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,7 @@
   "dependencies": {
     "angular": "^1.5.2",
     "angular-route": "^1.5.2",
+    "express": "^4.13.4",
     "jquery": "^2.2.2"
   }
 }
