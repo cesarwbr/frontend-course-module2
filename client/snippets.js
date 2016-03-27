@@ -15,3 +15,14 @@ app.config(function($routeProvider) {
         templateUrl: '/app/views/orders.html'
     });
 });
+
+
+app.factory('customersFactory', function($http) {
+    var factory = {};
+
+    factory.getCustomers = function() {
+        return $http.get('http://localhost:3000/api/customer');
+    };
+
+    return factory;
+});
