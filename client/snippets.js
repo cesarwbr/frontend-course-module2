@@ -26,3 +26,23 @@ app.factory('customersFactory', function($http) {
 
     return factory;
 });
+
+app.directive('customerCard', function() {
+    return {
+        restrict: 'E',
+        scope: {
+            customer: '='
+        },
+        transclude: true,
+        replace: true,
+        templateUrl: '/app/views/customer-card.html',
+        link: function(scope, element, attrs) {
+            element.on('click', function() {
+                alert('click');
+            });
+        },
+        controller: function($scope) {
+            console.log('controller');
+        }
+    };
+});
