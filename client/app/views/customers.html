@@ -1,8 +1,7 @@
 <h2>Customers</h2>
 
-<table>
-    <tr ng-repeat="customer in customers | filter:searchText">
-        <td><a href="#/orders">{{ customer.name }}</a></td>
-        <td>{{ customer.total | currency}}</td>
-    </tr>
-</table>
+<div ng-repeat="customer in customers">
+  <customer-card data="customer">
+    <h1>Customer Card</h1>
+  </customer-card>
+</div>
