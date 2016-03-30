@@ -1,5 +1,8 @@
 <div>
-  <h1>{{newData.name}}</h1>
   <div ng-transclude></div>
-  <p>{{newData.total}}</p>
+
+  <div>
+    <h3>{{newData.name | uppercase }}</h3>
+    <p>{{newData.total | checkmark }}</p>
+  </div>
 </div>

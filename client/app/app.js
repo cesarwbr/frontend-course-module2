@@ -35,7 +35,7 @@ app.factory('CustomersFactory', function($http) {
   return factory;
 });
 
-app.directive('customerCard', function() {
+app.directive('customerCard', function(CustomersFactory) {
   return {
     restrict: 'E',
     scope: {
@@ -44,13 +44,21 @@ app.directive('customerCard', function() {
     templateUrl: '/app/views/customer.html',
     transclude: true,
     replace: true,
+    controller: function($scope) {
+      console.log($scope.newData.name);
+    },
     link: function(scope, element, attrs) {
       element.on('click', function() {
         alert('click');
       });
-    },
-    controller: function($scope) {
-      console.log($scope.newData);
     }
+  };
+});
+
+app.filter('checkmark', function() {
+  return function(input) {
+    var check = input > 10 ? '\u2713' : '\u2718';
+
+    return input + ' ' + check;
   };
 });
