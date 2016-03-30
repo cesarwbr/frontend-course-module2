@@ -1,3 +1,10 @@
+app.filter('checkmark', function() {
+    return function(input) {
+        var check = input > 10 ? '\u2713' : '\u2718';
+        return input + ' ' + check;
+    };
+});
+
 $scope.customers = [
     {id: 1, name: 'Joao', total: 5.996},
     {id: 2, name: 'Maria', total: 10.994},
