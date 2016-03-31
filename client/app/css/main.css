@@ -1,0 +1,47 @@
+body {
+  font-family: sans-serif;
+  background: #3B465A;
+  color: white; }
+
+.module-title {
+  color: #D6DBDD;
+  text-align: center;
+  font-weight: 100;
+  font-size: 30px; }
+
+.customer-card {
+  background: #F2F7F6;
+  width: 300px;
+  display: inline-block;
+  margin: 10px; }
+  .customer-card header .photo {
+    margin: 0 auto;
+    width: 128px;
+    padding-top: 40px; }
+    .customer-card header .photo img {
+      border-radius: 50%; }
+  .customer-card header .info {
+    text-align: center; }
+    .customer-card header .info .name {
+      color: #1A3456;
+      font-weight: 100;
+      margin-top: 10px;
+      margin-bottom: 0; }
+    .customer-card header .info .title {
+      color: #96A2B4;
+      font-weight: 100;
+      font-size: 12px; }
+  .customer-card section {
+    background: #E7EDF6;
+    width: 100%;
+    margin-top: 30px;
+    color: #343945;
+    text-align: center; }
+    .customer-card section > div {
+      width: 45%;
+      display: inline-block;
+      padding-top: 15px;
+      padding-bottom: 15px; }
+      .customer-card section > div .title {
+        font-size: 12px;
+        font-weight: 100; }

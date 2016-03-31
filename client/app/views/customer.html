@@ -1,8 +1,22 @@
-<div>
-  <div ng-transclude></div>
+<div class="customer-card">
+  <header>
+      <div class="photo">
+          <img ng-src="{{ customer.image }}" alt="">
+      </div>
+      <div class="info">
+          <h2 class="name">{{ customer.name }}</h2>
+          <span class="title">{{ customer.title }}</span>
+      </div>
+  </header>
+  <section>
+      <div>
+          <div class="title">Produtos</div>
+          <div class="text">{{ customer.products }}</div>
+      </div>
 
-  <div>
-    <h3>{{newData.name | uppercase }}</h3>
-    <p>{{newData.total | checkmark }}</p>
-  </div>
+      <div>
+          <div class="title">Total</div>
+          <div class="text">{{ customer.total | currency }}</div>
+      </div>
+  </section>
 </div>

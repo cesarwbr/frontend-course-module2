@@ -22,6 +22,7 @@ app.controller('CustomersCtrl', function($scope, CustomersFactory) {
   $scope.name = 'test';
   CustomersFactory.getCustomers().success(function(data) {
     $scope.customers = data;
+    $scope.customersTotal = data.length;
   });
 });
 
@@ -39,19 +40,10 @@ app.directive('customerCard', function(CustomersFactory) {
   return {
     restrict: 'E',
     scope: {
-      newData: '=data'
+      customer: '=data'
     },
     templateUrl: '/app/views/customer.html',
-    transclude: true,
-    replace: true,
-    controller: function($scope) {
-      console.log($scope.newData.name);
-    },
-    link: function(scope, element, attrs) {
-      element.on('click', function() {
-        alert('click');
-      });
-    }
+    replace: true
   };
 });
 

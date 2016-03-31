@@ -1,0 +1,57 @@
+@import 'variables'
+
+body
+    font-family: $font-stack
+    background: $color-bg
+    color: white
+
+.module-title
+    color: $color-module-title
+    text-align: center
+    font-weight: 100
+    font-size: 30px
+
+.customer-card
+    background: $color-card-bg
+    width: 300px
+    display: inline-block
+    margin: 10px
+
+    header
+        .photo
+            margin: 0 auto
+            width: 128px
+            padding-top: 40px
+
+            img
+                border-radius: 50%
+
+        .info
+            text-align: center
+            .name
+                color: $color-card-info-name
+                font-weight: 100
+                margin-top: 10px
+                margin-bottom: 0
+
+            .title
+                color: $color-card-info-title
+                font-weight: 100
+                font-size: 12px
+
+    section
+        background: $color-card-section-bg
+        width: 100%
+        margin-top: 30px
+        color: $color-card-section
+        text-align: center
+
+        &>div
+            width: 45%
+            display: inline-block
+            padding-top: 15px
+            padding-bottom: 15px
+
+            .title
+                font-size: 12px
+                font-weight: 100

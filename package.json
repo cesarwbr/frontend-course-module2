@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "cd client && webpack-dev-server",
-    "server": "node server/server.js"
+    "server": "node server/server.js",
+    "build-css": "node-sass client/app/css/main.sass client/app/css/main.css",
+    "watch-css": "nodemon -e client/app/css/main.sass -x \"npm run build-css\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "node-sass": "^3.4.2",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   },
