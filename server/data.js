@@ -2,7 +2,7 @@ exports.customers = [
     {
         id: 1,
         name: 'Caroline Howard',
-        title: 'Social Media marketing',
+        title: 'Social Media Marketing',
         image: 'app/images/caroline.jpg',
         products: 5,
         total: 5.996
