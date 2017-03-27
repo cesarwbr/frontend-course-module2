@@ -16,7 +16,8 @@
 
       <div>
           <div class="title">Total</div>
-          <div class="text">{{ customer.total | currency }}</div>
+          <span class="text">{{ customer.total | currency }}</span>
+          <span class="text">{{ customer.total | checkmark }}</span>
       </div>
   </section>
 </div>
