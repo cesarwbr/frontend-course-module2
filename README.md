@@ -49,7 +49,7 @@ The basic file structure for the project is organized in the following way:
 
 ## Testsuite
 
-The app uses [Mocha](https://mochajs.org/) to run the tests located in the `test/` folder. To run the tests:
+The app uses [Jasmine](https://jasmine.github.io/) and [Karma](https://karma-runner.github.io/1.0/index.html) to run the tests located in the `test/` folder. To run the tests:
 
 ```
 $ npm install
