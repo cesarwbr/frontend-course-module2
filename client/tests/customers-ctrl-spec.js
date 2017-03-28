@@ -9,11 +9,11 @@ describe('customers-ctrl', function () {
 
   describe('total', function () {
     it('total of customers', function () {
-      var $scope = {}
-      var controller = $controller('CustomersCtrl', { $scope: $scope });
-      $scope.customers = ['Joao', 'Maria', 'Jose']
-      $scope.getLastCustomer()
-      expect($scope.lastCustomer).toBe('Jose')
+      var vm = $controller('CustomersCtrl');
+
+      vm.customers = ['Joao', 'Maria', 'Jose']
+      vm.getLastCustomer()
+      expect(vm.lastCustomer).toBe('Jose')
     })
   })
 })

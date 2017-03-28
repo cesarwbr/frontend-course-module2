@@ -4,18 +4,10 @@
 module.exports = function(config) {
   config.set({
     basePath: '',
-    preprocessors: {
-      './client/app/js/**/*.js': ['webpack'],
-      './client/tests/*spec.js': ['webpack']
-    },
     middleware: ['webpack'],
     webpack: {
-      entry: ['./entry_point.js']
-    }
-
-    // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
-
+      entry: ['./client/index.js']
+    },
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -24,8 +16,9 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      './client/app/js/**/*.js',
-      './client/tests/*spec.js'
+      './client/index.js',
+      './node_modules/angular-mocks/angular-mocks.js',
+      './client/tests/*.js'
     ],
 
 

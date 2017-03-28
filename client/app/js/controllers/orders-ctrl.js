@@ -1,5 +1,6 @@
-function OrdersCtrl ($scope) {
-  $scope.customerId = 4
+function OrdersCtrl () {
+  var vm = this
+  vm.customerId = 4
 }
 
 export default OrdersCtrl

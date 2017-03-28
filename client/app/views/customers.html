@@ -1,6 +1,6 @@
-Search: <input type="text" ng-model="searchText">
+Search: <input type="text" ng-model="customers.searchText">
 
-<h1 class="module-title">Customers: <strong>{{ customersTotal }}</strong></h1>
+<h1 class="module-title">Customers: <strong>{{ customers.customersTotal }}</strong></h1>
 
-<customer-card data="customer" ng-repeat="customer in customers | filter:searchText">
+<customer-card data="customer" ng-repeat="customer in customers.customers | filter:customers.searchText">
 </customer-card>

@@ -1,5 +1,6 @@
-function CustomersCtrl ($scope, CustomersFactory) {
+function CustomersCtrl (CustomersFactory) {
   var vm = this
+
   CustomersFactory.getCustomers().then(function(data) {
     vm.customers = data.data
     vm.customersTotal = data.data.length
